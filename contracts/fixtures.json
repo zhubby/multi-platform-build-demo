@@ -1,0 +1,6 @@
+{
+  "tasks": {"items": [{"id":"7c136ca2-0931-4f5a-8e62-957dc52b19ee","title":"准备五端构建验收","completed":false,"revision":1,"created_at":"2026-11-18T08:00:00Z","updated_at":"2026-11-18T08:00:00.123Z"}]},
+  "notes": {"items": [{"id":"1fb4e61b-1021-42ee-845f-e95719266260","title":"内网连接说明","body":"手机与桌面连接同一个服务。\n支持中文与 emoji 🚀。","revision":2,"created_at":"2026-11-18T08:00:00Z","updated_at":"2026-11-18T08:01:00Z"}]},
+  "empty": {"items": []},
+  "conflict": {"error":{"code":"conflict","message":"记录已在其他设备修改，请刷新后重试。"}}
+}

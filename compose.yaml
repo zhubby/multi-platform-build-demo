@@ -1,0 +1,30 @@
+# [INPUT]: TASKNOTES_TOKEN 与 server/Dockerfile。
+# [OUTPUT]: 提供内网服务端与持久数据卷。
+# [POS]: 开发与内网自托管入口；不启动其他平台服务。
+# [PROTOCOL]: Update this header on change, then check AGENTS.md
+services:
+  tasknotes:
+    build:
+      context: ./server
+      args:
+        VERSION: "0.1.0"
+        COMMIT: "${TASKNOTES_COMMIT:-unknown}"
+        GO_IMAGE: "${TASKNOTES_GO_IMAGE:-golang:1.27.3-bookworm}"
+        GOPROXY: "${TASKNOTES_GOPROXY:-https://proxy.golang.org,direct}"
+    image: tasknotes-server:0.1.0
+    entrypoint: ["/tasknotes"]
+    environment:
+      TASKNOTES_TOKEN: "${TASKNOTES_TOKEN:?请先设置 TASKNOTES_TOKEN}"
+      TASKNOTES_ADDR: "0.0.0.0:8080"
+      TASKNOTES_DB: "/data/tasknotes.db"
+    ports:
+      - "${TASKNOTES_BIND_ADDRESS:-127.0.0.1}:8080:8080"
+    volumes:
+      - tasknotes-data:/data
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  tasknotes-data:

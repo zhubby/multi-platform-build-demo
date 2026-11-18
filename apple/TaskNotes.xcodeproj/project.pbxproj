@@ -1,0 +1,55 @@
+// !$*UTF8*$!
+// [INPUT]: App/ SwiftUI 源码与 apple/ 本地 Swift 包。
+// [OUTPUT]: 提供独立 iOS、macOS 应用 targets。
+// [POS]: 固定 Xcode 工程；构建不生成或改写工程。
+// [PROTOCOL]: Update this header on change, then check AGENTS.md
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+        A00000000000000000000001 = {isa = PBXBuildFile; fileRef = B00000000000000000000001; };
+        A00000000000000000000002 = {isa = PBXBuildFile; fileRef = B00000000000000000000002; };
+        A00000000000000000000003 = {isa = PBXBuildFile; fileRef = B00000000000000000000003; };
+        A00000000000000000000004 = {isa = PBXBuildFile; fileRef = B00000000000000000000004; };
+        A00000000000000000000005 = {isa = PBXBuildFile; productRef = F00000000000000000000002; };
+        A00000000000000000000011 = {isa = PBXBuildFile; fileRef = B00000000000000000000001; };
+        A00000000000000000000012 = {isa = PBXBuildFile; fileRef = B00000000000000000000002; };
+        A00000000000000000000013 = {isa = PBXBuildFile; fileRef = B00000000000000000000003; };
+        A00000000000000000000014 = {isa = PBXBuildFile; fileRef = B00000000000000000000004; };
+        A00000000000000000000015 = {isa = PBXBuildFile; productRef = F00000000000000000000003; };
+        B00000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskNotesApp.swift; sourceTree = "<group>"; };
+        B00000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+        B00000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editors.swift; sourceTree = "<group>"; };
+        B00000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+        B00000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info-ios.plist; sourceTree = "<group>"; };
+        B00000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info-macos.plist; sourceTree = "<group>"; };
+        B00000000000000000000010 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        B00000000000000000000011 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        C00000000000000000000001 = {isa = PBXGroup; children = (C00000000000000000000002, C00000000000000000000003); sourceTree = "<group>"; };
+        C00000000000000000000002 = {isa = PBXGroup; path = App; sourceTree = "<group>"; children = (B00000000000000000000001, B00000000000000000000002, B00000000000000000000003, B00000000000000000000004, B00000000000000000000005, B00000000000000000000006); };
+        C00000000000000000000003 = {isa = PBXGroup; name = Products; sourceTree = "<group>"; children = (B00000000000000000000010, B00000000000000000000011); };
+        D00000000000000000000001 = {isa = PBXNativeTarget; buildConfigurationList = E00000000000000000000002; buildPhases = (D00000000000000000000011, D00000000000000000000012, D00000000000000000000013); buildRules = (); dependencies = (); name = TaskNotesiOS; productName = TaskNotes; productReference = B00000000000000000000010; productType = "com.apple.product-type.application"; packageProductDependencies = (F00000000000000000000002); };
+        D00000000000000000000002 = {isa = PBXNativeTarget; buildConfigurationList = E00000000000000000000003; buildPhases = (D00000000000000000000021, D00000000000000000000022, D00000000000000000000023); buildRules = (); dependencies = (); name = TaskNotesmacOS; productName = TaskNotes; productReference = B00000000000000000000011; productType = "com.apple.product-type.application"; packageProductDependencies = (F00000000000000000000003); };
+        D00000000000000000000011 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000001, A00000000000000000000002, A00000000000000000000003, A00000000000000000000004); runOnlyForDeploymentPostprocessing = 0; };
+        D00000000000000000000012 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000005); runOnlyForDeploymentPostprocessing = 0; };
+        D00000000000000000000013 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+        D00000000000000000000021 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000011, A00000000000000000000012, A00000000000000000000013, A00000000000000000000014); runOnlyForDeploymentPostprocessing = 0; };
+        D00000000000000000000022 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000015); runOnlyForDeploymentPostprocessing = 0; };
+        D00000000000000000000023 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+        E00000000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (E00000000000000000000011, E00000000000000000000012); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        E00000000000000000000002 = {isa = XCConfigurationList; buildConfigurations = (E00000000000000000000021, E00000000000000000000022); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        E00000000000000000000003 = {isa = XCConfigurationList; buildConfigurations = (E00000000000000000000031, E00000000000000000000032); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        E00000000000000000000011 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = dwarf; }; };
+        E00000000000000000000012 = {isa = XCBuildConfiguration; name = Release; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-O"; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; }; };
+        E00000000000000000000021 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; INFOPLIST_FILE = "App/Info-ios.plist"; GENERATE_INFOPLIST_FILE = NO; PRODUCT_BUNDLE_IDENTIFIER = com.tasknotes.demo.ios; PRODUCT_NAME = TaskNotes; MARKETING_VERSION = 0.1.0; CURRENT_PROJECT_VERSION = 1; CODE_SIGN_STYLE = Automatic; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; }; };
+        E00000000000000000000022 = {isa = XCBuildConfiguration; name = Release; buildSettings = {SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; INFOPLIST_FILE = "App/Info-ios.plist"; GENERATE_INFOPLIST_FILE = NO; PRODUCT_BUNDLE_IDENTIFIER = com.tasknotes.demo.ios; PRODUCT_NAME = TaskNotes; MARKETING_VERSION = 0.1.0; CURRENT_PROJECT_VERSION = 1; CODE_SIGN_STYLE = Automatic; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; }; };
+        E00000000000000000000031 = {isa = XCBuildConfiguration; name = Debug; buildSettings = {SDKROOT = macosx; SUPPORTED_PLATFORMS = macosx; MACOSX_DEPLOYMENT_TARGET = 14.0; INFOPLIST_FILE = "App/Info-macos.plist"; GENERATE_INFOPLIST_FILE = NO; PRODUCT_BUNDLE_IDENTIFIER = com.tasknotes.demo.macos; PRODUCT_NAME = TaskNotes; MARKETING_VERSION = 0.1.0; CURRENT_PROJECT_VERSION = 1; CODE_SIGN_STYLE = Manual; CODE_SIGN_IDENTITY = "-"; ENABLE_APP_SANDBOX = NO; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; }; };
+        E00000000000000000000032 = {isa = XCBuildConfiguration; name = Release; buildSettings = {SDKROOT = macosx; SUPPORTED_PLATFORMS = macosx; MACOSX_DEPLOYMENT_TARGET = 14.0; INFOPLIST_FILE = "App/Info-macos.plist"; GENERATE_INFOPLIST_FILE = NO; PRODUCT_BUNDLE_IDENTIFIER = com.tasknotes.demo.macos; PRODUCT_NAME = TaskNotes; MARKETING_VERSION = 0.1.0; CURRENT_PROJECT_VERSION = 1; CODE_SIGN_STYLE = Manual; CODE_SIGN_IDENTITY = "-"; ENABLE_APP_SANDBOX = NO; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; }; };
+        F00000000000000000000001 = {isa = XCLocalSwiftPackageReference; relativePath = .; };
+        F00000000000000000000002 = {isa = XCSwiftPackageProductDependency; package = F00000000000000000000001; productName = TaskNotesCore; };
+        F00000000000000000000003 = {isa = XCSwiftPackageProductDependency; package = F00000000000000000000001; productName = TaskNotesCore; };
+        F00000000000000000000010 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 1500; }; buildConfigurationList = E00000000000000000000001; compatibilityVersion = "Xcode 14.0"; developmentRegion = "zh-Hans"; hasScannedForEncodings = 0; knownRegions = ("zh-Hans", en, Base); mainGroup = C00000000000000000000001; productRefGroup = C00000000000000000000003; projectDirPath = ""; projectRoot = ""; targets = (D00000000000000000000001, D00000000000000000000002); packageReferences = (F00000000000000000000001); };
+    };
+    rootObject = F00000000000000000000010;
+}

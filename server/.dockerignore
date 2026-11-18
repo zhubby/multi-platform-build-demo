@@ -1,0 +1,5 @@
+.local
+data
+*.db*
+bin
+target
